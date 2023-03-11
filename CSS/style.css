@@ -1,0 +1,280 @@
+@font-face {
+    font-family: 'orange_juiceregular';
+    src: url("../Fonts/orange_juice_2.0-webfont.woff") format('woff2'),
+        url("../Fonts/orange_juice_2.0-webfont.woff2") format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+body{
+    background-color: #DCD6F7;
+    margin: auto;
+}
+
+Header{
+    background-color: #424874 ;
+    width: 100%;
+}
+/*CONTAINER DU HEADER*/
+.container{
+    display: flex;
+}
+/*LA DIV DU LOGO*/
+.divlogo{
+    display: flex;
+}
+
+
+#Logogamer{
+    width: 30%;
+}
+
+.Titregamer{
+    font-size:x-large;
+    padding-top: 10%;
+    color: #F4EEFF;
+    width: 50%;
+    font-family:'orange_juiceregular' ;
+}
+/*LOGO PROFIL DU GAMER*/
+.divlogoprofil{
+    display: flex;
+    padding-top: 2%;
+}
+
+#imgprofil{
+  margin-left: 50%;
+  width: 20%;
+}
+
+/*DIV CONTAINER DE LA NAV*/
+.divnav{
+    width: 40%;
+    padding-right: 10%;
+}
+
+nav ul li {
+    text-align: center;
+    list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #F4EEFF ;
+}
+
+
+.divselect{
+    display: flex;
+    text-align: center;
+    padding-top: 10%;
+    justify-content: space-between;
+}
+
+#Plateforme{
+    background-color: #424874;
+    color: #F4EEFF;
+    border: none;
+}
+
+
+
+p{
+    color: #F4EEFF;
+}
+
+
+.divnouveautés{
+    text-align: center;
+    color: #424874;
+    padding-top: 5%;
+}
+
+/*ICI LE CAROUSEL*/
+
+.container1 {
+    position: relative;
+    width: 320px;
+    margin: 100px auto 0 auto;
+    perspective: 1000px;
+    display: flex;
+}
+
+.carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; 
+    animation: rotate360 60s infinite forwards linear;
+}
+.carousel__face { 
+    position: absolute;
+    width: 300px;
+    height: 187px;
+    top: 20px;
+    left: 10px;
+    right: 10px;
+    background-size: cover;
+    box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
+    display: flex;
+}
+
+span {
+    margin: auto;
+    font-size: 2rem;
+  }
+  
+  
+  .carousel__face:nth-child(1) {
+    background-image: url("../médias/images/EldenRing.png");
+    transform: rotateY(  0deg) translateZ(430px); }
+  .carousel__face:nth-child(2) { 
+    background-image: url("../médias/images/CODMW2.png");
+    transform: rotateY( 40deg) translateZ(430px); }
+  .carousel__face:nth-child(3) {
+    background-image: url("../médias/images/GoW.png");
+    transform: rotateY( 80deg) translateZ(430px); }
+  .carousel__face:nth-child(4) {
+    background-image: url("../médias/images/Hogwarts.png");
+    transform: rotateY(120deg) translateZ(430px); }
+  .carousel__face:nth-child(5) { 
+    background-image: url("../médias/images/PlagueTale.png");
+    transform: rotateY(160deg) translateZ(430px); }
+  .carousel__face:nth-child(6) { 
+    background-image: url("../médias/images/skul_and_bones.png");
+    transform: rotateY(200deg) translateZ(430px); }
+  .carousel__face:nth-child(7) { 
+    background-image: url("../médias/images/EldenRing.png");
+    transform: rotateY(240deg) translateZ(430px); }
+  .carousel__face:nth-child(8) {
+    background-image: url("../médias/images/Hogwarts.png");
+    transform: rotateY(280deg) translateZ(430px); }
+  .carousel__face:nth-child(9) {
+    background-image: url("../médias/images/PlagueTale.png");
+    transform: rotateY(320deg) translateZ(430px); }
+  
+  
+  
+  @keyframes rotate360 {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(-360deg);
+    }
+  }
+
+/*ICI LA SEARCH BAR*/
+
+.searchbutton{
+  margin-top: 10%;
+    padding-top: 25%;
+    padding-left: 2%;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+.search-box{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+.input-search{
+    height: 50px;
+    width: 50px;
+    border-style: none;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 25px;
+    transition: all .5s ease-in-out;
+    background-color: #A6B1E1;
+    padding-right: 40px;
+    color:rgb(255, 255, 255);
+  }
+  .input-search::placeholder{
+    color:#424874;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 100;
+  }
+  .btn-search{
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    color:#ffffff ;
+    background-color:transparent;
+    pointer-events: painted;  
+  }
+  .btn-search:focus ~ .input-search{
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid rgba(255,255,255,.5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }
+  .input-search:focus{
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid rgba(255,255,255,.5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }
+  
+  /*CARD 1*/
+  .containercard{
+    background-color:blue ;
+    width: 100%;
+    padding-bottom: 20%;
+  }
+
+  .divcard1{
+    margin-top: 5%;
+    background-color: #A6B1E1;
+    width: 20%;
+    padding: 1%;
+    border-radius: 20px;
+  }
+
+  .imgcard1{
+    width: 100%;
+    border-radius: 20px
+  }
+
+  h2{
+    color: #424874;
+  }
+
+
+  #imgplusdinfos{
+    width: 60%;
+    margin-left: 30%;
+    margin-top: 10%;
+    background-color: aqua;
+  }
+
+  .divinfos{
+    display: flex;
+    padding-left: 50%;
+    background-color: yellowgreen;
+  }
+
+  .texteinfos{
+    color: black;
+    background-color: #424874;
+    
+  }
